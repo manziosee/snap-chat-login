@@ -1,0 +1,188 @@
+:root {
+    --main-color: #fffc00;
+    --black-color: #000000;
+    --grey-color: #bbbbbb;
+    --blue-color: #0d46d9;
+    --white-color: #ffffff;
+    --font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+      Helvetica, Arial, 'Lucida Grande', sans-serif;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    background-color: #fffc00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5rem;
+    padding: 1rem;
+  }
+  
+  nav .logo {
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+    height: 3.625rem;
+    width: 3.625rem;
+    border-radius: 50%;
+    background-color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section.main-content {
+    font-family: var(--font-family);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .hero {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  
+  .google-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .google-login button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    outline: none;
+    background-color: var(--black-color);
+    color: var(--main-color);
+    border-radius: 2.2rem;
+    font-size: 1.125rem;
+    line-height: 1.3rem;
+  }
+  
+  .google-login span {
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 0.7rem;
+  }
+  
+  .or {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--grey-color);
+  }
+  
+  .form {
+    margin-top: -2rem;
+  }
+  
+  .form form {
+    padding: 0 2rem;
+  }
+  
+  form .field {
+    position: relative;
+    border-bottom: 0.125rem solid var(--black-color);
+    margin: 1.875rem 0;
+  }
+  
+  .field input {
+    width: 100%;
+    padding: 0 0.3125rem;
+    height: 2.5rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .field label {
+    position: absolute;
+    top: 50%;
+    left: 0.3125rem;
+    color: var(--grey-color);
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  .field span::before {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background: var(--main-color);
+    transition: 0.5s;
+  }
+  
+  .field input:focus ~ label,
+  .field input:valid ~ label {
+    top: 0.3125rem;
+  }
+  
+  .field input:focus ~ span::before,
+  .field input:valid ~ span::before {
+    width: 100%;
+  }
+  
+  .forgot-pass {
+    display: flex;
+    justify-content: space-between;
+    margin: -1.1rem 0 2rem 0;
+  }
+  
+  .forgot-pass a {
+    text-decoration: none;
+    font-size: 0.625rem;
+    font-weight: 600;
+    line-height: 0.73;
+    color: var(--blue-color);
+  }
+  
+  button.login-btn {
+    width: 100%;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    outline: none;
+    background-color: var(--grey-color);
+    color: var(--white-color);
+    border-radius: 2.2rem;
+    font-size: 1.125rem;
+    line-height: 1.3rem;
+    font-family: var(--font-family);
+    transition: .5s;
+  }
+  
+  button.login-btn:hover,
+  button.login-btn:focus {
+      background-color: var(--main-color);
+      color: var(--black-color);
+  }
+  
+  .redirect {
+    font-size: 0.625rem;
+  }
+  
+  .redirect a {
+    text-decoration: none;
+    color: var(--black-color);
+  }
+  
+  .redirect span {
+    color: var(--grey-color);
+  }
+  
